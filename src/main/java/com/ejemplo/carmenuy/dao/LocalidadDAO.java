@@ -1,6 +1,6 @@
 package com.ejemplo.carmenuy.dao;
 
-import com.ejemplo.carmenuy.model.Localidad;
+import com.ejemplo.carmenuy.model.Localidad2;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -27,7 +27,7 @@ public class LocalidadDAO {
         }
     }
 
-    public void insertarLocalidad(Localidad localidad) throws SQLException {
+    public void insertarLocalidad(Localidad2 localidad) throws SQLException {
         String sql = "INSERT INTO localidades (nombre, descripcion, latitud, longitud) VALUES (?, ?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, localidad.getNombre());
@@ -39,24 +39,24 @@ public class LocalidadDAO {
     }
 
     public void insertarLocalidadesIniciales() throws SQLException {
-        List<Localidad> localidadesIniciales = new ArrayList<>();
+        List<Localidad2> localidadesIniciales = new ArrayList<>();
         for (char c = 'A'; c <= 'Z'; c++) {
-            localidadesIniciales.add(new Localidad(String.valueOf(c), "Descripción de " + c, 0.0, 0.0));
+            localidadesIniciales.add(new Localidad2(String.valueOf(c), "Descripción de " + c, 0.0, 0.0));
         }
         for (char c1 = 'A'; c1 <= 'Z'; c1++) {
             for (char c2 = 'A'; c2 <= 'Z'; c2++) {
-                localidadesIniciales.add(new Localidad("" + c1 + c2, "Descripción de " + c1 + c2, 0.0, 0.0));
+                localidadesIniciales.add(new Localidad2("" + c1 + c2, "Descripción de " + c1 + c2, 0.0, 0.0));
                 if (localidadesIniciales.size() == 40) {
                     break;
                 }
             }
         }
-        for (Localidad localidad : localidadesIniciales) {
+        for (Localidad2 localidad : localidadesIniciales) {
             insertarLocalidad(localidad);
         }
     }
 
-    public void actualizarLocalidad(Localidad localidad) throws SQLException {
+    public void actualizarLocalidad(Localidad2 localidad) throws SQLException {
         String sql = "UPDATE localidades SET nombre = ?, descripcion = ?, latitud = ?, longitud = ? WHERE id = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, localidad.getNombre());
@@ -76,8 +76,8 @@ public class LocalidadDAO {
         }
     }
 
-    public List<Localidad> obtenerTodasLasLocalidades() throws SQLException {
-        List<Localidad> localidades = new ArrayList<>();
+    public List<Localidad2> obtenerTodasLasLocalidades() throws SQLException {
+        List<Localidad2> localidades = new ArrayList<>();
         String sql = "SELECT id, nombre, descripcion, latitud, longitud FROM localidades";
         try (PreparedStatement statement = this.connection.prepareStatement(sql);
              ResultSet resultSet = statement.executeQuery()) {
@@ -87,13 +87,13 @@ public class LocalidadDAO {
                 String descripcion = resultSet.getString("descripcion");
                 double latitud = resultSet.getDouble("latitud");
                 double longitud = resultSet.getDouble("longitud");
-                localidades.add(new Localidad(id, nombre, descripcion, latitud, longitud));
+                localidades.add(new Localidad2(id, nombre, descripcion, latitud, longitud));
             }
         }
         return localidades;
     }
 
-    public Localidad obtenerLocalidadPorNombre(String nombre) throws SQLException {
+    public Localidad2 obtenerLocalidadPorNombre(String nombre) throws SQLException {
         String sql = "SELECT id, nombre, descripcion, latitud, longitud FROM localidades WHERE nombre = ?";
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, nombre);
@@ -103,7 +103,7 @@ public class LocalidadDAO {
                     String descripcion = resultSet.getString("descripcion");
                     double latitud = resultSet.getDouble("latitud");
                     double longitud = resultSet.getDouble("longitud");
-                    return new Localidad(id, nombre, descripcion, latitud, longitud);
+                    return new Localidad2(id, nombre, descripcion, latitud, longitud);
                 }
             }
         }

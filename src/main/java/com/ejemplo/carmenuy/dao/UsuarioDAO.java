@@ -1,12 +1,14 @@
 package com.ejemplo.carmenuy.dao;
 
-import com.ejemplo.carmenuy.model.Usuario;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import modelo.Usuario;
 
 public class UsuarioDAO {
+
     private final Connection connection;
 
     public UsuarioDAO(Connection connection) {
@@ -38,7 +40,7 @@ public class UsuarioDAO {
             statement.setString(2, usuario.getApellido());
             statement.setString(3, usuario.getContrasena());
             statement.setString(4, usuario.getRango());
-            statement.setInt(5, usuario.getCapturas());
+            statement.setInt(5, usuario.getCaptura());
             statement.setString(6, usuario.getProgreso());
             statement.executeUpdate();
         }
@@ -51,15 +53,18 @@ public class UsuarioDAO {
             statement.setString(2, contrasena);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                return new Usuario(
-                        resultSet.getInt("id"),
-                        resultSet.getString("nombre"),
-                        resultSet.getString("apellido"),
-                        resultSet.getString("contrasena"),
-                        resultSet.getString("rango"),
-                        resultSet.getInt("capturas"),
-                        resultSet.getString("progreso")
-                );
+                
+                // VER TIPO DE DATOS (ID)
+                
+//                return new Usuario(
+//                        resultSet.getInt("id"),
+//                        resultSet.getString("nombre"),
+//                        resultSet.getString("apellido"),
+//                        resultSet.getString("contrasena"),
+//                        resultSet.getString("rango"),
+//                        resultSet.getInt("capturas"),
+//                        resultSet.getString("progreso")
+//                );
             }
         }
         return null;
@@ -67,12 +72,13 @@ public class UsuarioDAO {
 
     public void actualizarUsuario(Usuario usuario) throws SQLException {
         String sql = "UPDATE usuarios SET nombre = ?, apellido = ?, contrasena = ?, rango = ?, capturas = ?, progreso = ? WHERE id = ?";
+        // try with resources: para manipular recursos automáticamente
         try (PreparedStatement statement = connection.prepareStatement(sql)) {
             statement.setString(1, usuario.getNombre());
             statement.setString(2, usuario.getApellido());
             statement.setString(3, usuario.getContrasena());
             statement.setString(4, usuario.getRango());
-            statement.setInt(5, usuario.getCapturas());
+            statement.setInt(5, usuario.getCaptura());
             statement.setString(6, usuario.getProgreso());
             statement.setInt(7, usuario.getId());
             statement.executeUpdate();
@@ -86,4 +92,14 @@ public class UsuarioDAO {
             statement.executeUpdate();
         }
     }
+
+    public Usuario obtenerUsuarioPorNombre(String nombre) throws SQLException {
+        String sql = "SELECT * FROM usuarios WHERE nombre = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.executeUpdate();
+            // todo: resto de la lógica
+        }
+        return null; // todo: lógica
+    }
+
 }

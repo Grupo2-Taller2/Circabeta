@@ -1,8 +1,8 @@
 package com.ejemplo.carmenuy.ui;
 
 import com.ejemplo.carmenuy.service.JuegoService;
-import com.ejemplo.carmenuy.model.Pista;
-import com.ejemplo.carmenuy.model.Localidad;
+import com.ejemplo.carmenuy.model.Pista2;
+import com.ejemplo.carmenuy.model.Localidad2;
 import com.ejemplo.carmenuy.dao.PistaDAO;
 
 import javax.swing.*;
@@ -17,7 +17,7 @@ import java.util.List;
 public class VentanaJuego extends JFrame {
     private final JuegoService juegoService;
     private final JTextArea textArea;
-    private List<Pista> pistasActuales;
+    private List<Pista2> pistasActuales;
 
     public VentanaJuego(JuegoService juegoService) {
         this.juegoService = juegoService;
@@ -67,12 +67,14 @@ public class VentanaJuego extends JFrame {
     }
 
     private void obtenerPistas() {
-        Localidad localidadActual = juegoService.obtenerLocalidadActual();
-        pistasActuales = juegoService.obtenerTresPistasAlAzar(localidadActual);
+        Localidad2 localidadActual = juegoService.obtenerLocalidadActual();
+        // Localidad2 hardcodeada para evitar NullPointerException
+        Localidad2 localidadHardcode = new Localidad2("Minas", "Fuente del puma", 57.5, 57.6);
+        pistasActuales = juegoService.obtenerTresPistasAlAzar(localidadHardcode);
         mostrarPistas(pistasActuales);
     }
 
-    private void mostrarPistas(List<Pista> pistas) {
+    private void mostrarPistas(List<Pista2> pistas) {
         StringBuilder sb = new StringBuilder();
         sb.append("Detective Usuario,\n")
                 .append("Ha llegado un mensaje de ACME, prioridad alfa 6, que dice que:\n")

@@ -1,94 +1,98 @@
 package com.ejemplo.carmenuy.model;
 
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author 32681391
+ */
 public class Usuario {
+
     private int id;
     private String nombre;
     private String apellido;
+    private String nombreUsuario;
     private String contrasena;
     private String rango;
-    private int capturas;
+    private int captura;
     private String progreso;
 
-    public Usuario(int id, String nombre, String apellido, String contrasena, String rango, int capturas, String progreso) {
+    public Usuario(int id, String nombre, String apellido, String nombreUsuario, String contrasena, String rango, int captura, String progreso) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.nombreUsuario = nombreUsuario;
         this.contrasena = contrasena;
         this.rango = rango;
-        this.capturas = capturas;
+        this.captura = captura;
         this.progreso = progreso;
     }
 
-    public Usuario(String nombre, String apellido, String contrasena, String rango, int capturas, String progreso) {
-        this(0, nombre, apellido, contrasena, rango, capturas, progreso);
-    }
-
-    // Getters y setters
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getApellido() {
         return apellido;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
     public String getContrasena() {
         return contrasena;
     }
 
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
-    }
-
     public String getRango() {
         return rango;
     }
 
-    public void setRango(String rango) {
-        this.rango = rango;
-    }
-
-    public int getCapturas() {
-        return capturas;
-    }
-
-    public void setCapturas(int capturas) {
-        this.capturas = capturas;
+    public int getCaptura() {
+        return captura;
     }
 
     public String getProgreso() {
         return progreso;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public void setRango(String rango) {
+        this.rango = rango;
+    }
+
+    public void setCaptura(int captura) {
+        this.captura = captura;
+    }
+
     public void setProgreso(String progreso) {
         this.progreso = progreso;
     }
 
-    @Override
-    public String toString() {
-        return "Usuario{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", rango='" + rango + '\'' +
-                ", capturas=" + capturas +
-                ", progreso='" + progreso + '\'' +
-                '}';
-    }
 }

@@ -6,25 +6,43 @@ import java.util.Objects;
  * Representa a un secuaz en el juego Carmen Sandiego Uruguay.
  */
 public class Secuaz {
+    private int id;  // Agregado para el ID del secuaz
     private String nombre;
     private String habilidad;
     private int peligrosidad;
-    private Localidad localidad;  // Agregado para la localidad del secuaz
+    private Localidad2 localidad;  // Agregado para la localidad del secuaz
     private boolean capturado; // Agregado para manejar la captura del secuaz
 
     /**
      * Constructor para crear un secuaz.
      *
+     * @param id El identificador único del secuaz.
      * @param nombre El nombre del secuaz.
      * @param habilidad La habilidad o especialidad del secuaz.
      * @param peligrosidad Nivel de peligrosidad del secuaz, de 1 a 10.
+     * @param localidad La localidad del secuaz.
+     * @param capturado Indica si el secuaz ha sido capturado.
      */
-    public Secuaz(String nombre, String habilidad, int peligrosidad) {
+    public Secuaz(int id, String nombre, String habilidad, int peligrosidad, Localidad2 localidad, boolean capturado) {
+        this.id = id;
         this.nombre = Objects.requireNonNull(nombre, "El nombre no puede ser nulo");
         this.habilidad = Objects.requireNonNull(habilidad, "La habilidad no puede ser nula");
         this.peligrosidad = peligrosidad;
-        this.capturado = false; // Inicialmente no está capturado
+        this.localidad = localidad;
+        this.capturado = capturado;
         validarPeligrosidad();
+    }
+
+    /**
+     * Constructor para crear un secuaz sin un ID especificado, útil para cuando se crea un nuevo secuaz que aún no ha sido guardado en la base de datos.
+     *
+     * @param nombre El nombre del secuaz.
+     * @param habilidad La habilidad o especialidad del secuaz.
+     * @param peligrosidad Nivel de peligrosidad del secuaz, de 1 a 10.
+     * @param localidad La localidad del secuaz.
+     */
+    public Secuaz(String nombre, String habilidad, int peligrosidad, Localidad2 localidad) {
+        this(0, nombre, habilidad, peligrosidad, localidad, false);
     }
 
     /**
@@ -37,6 +55,14 @@ public class Secuaz {
     }
 
     // Getters y setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -70,11 +96,11 @@ public class Secuaz {
         this.peligrosidad = peligrosidad;
     }
 
-    public Localidad getLocalidad() {
+    public Localidad2 getLocalidad() {
         return localidad;
     }
 
-    public void setLocalidad(Localidad localidad) {
+    public void setLocalidad(Localidad2 localidad) {
         this.localidad = localidad;
     }
 
@@ -92,8 +118,8 @@ public class Secuaz {
 
     @Override
     public String toString() {
-        return String.format("Secuaz{nombre='%s', habilidad='%s', peligrosidad=%d, localidad=%s, capturado=%b}",
-                nombre, habilidad, peligrosidad, localidad != null ? localidad.getNombre() : "Sin localidad", capturado);
+        return String.format("Secuaz{id=%d, nombre='%s', habilidad='%s', peligrosidad=%d, localidad=%s, capturado=%b}",
+                id, nombre, habilidad, peligrosidad, localidad != null ? localidad.getNombre() : "Sin localidad", capturado);
     }
 
     @Override
@@ -101,7 +127,8 @@ public class Secuaz {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Secuaz secuaz = (Secuaz) o;
-        return peligrosidad == secuaz.peligrosidad &&
+        return id == secuaz.id &&
+                peligrosidad == secuaz.peligrosidad &&
                 capturado == secuaz.capturado &&
                 Objects.equals(nombre, secuaz.nombre) &&
                 Objects.equals(habilidad, secuaz.habilidad) &&
@@ -110,6 +137,6 @@ public class Secuaz {
 
     @Override
     public int hashCode() {
-        return Objects.hash(nombre, habilidad, peligrosidad, localidad, capturado);
+        return Objects.hash(id, nombre, habilidad, peligrosidad, localidad, capturado);
     }
 }

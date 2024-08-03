@@ -1,7 +1,7 @@
 package com.ejemplo.carmenuy.service;
 
 import com.ejemplo.carmenuy.dao.LocalidadDAO;
-import com.ejemplo.carmenuy.model.Localidad;
+import com.ejemplo.carmenuy.model.Localidad2;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -16,7 +16,7 @@ public class LocalidadService {
         this.localidadDAO = localidadDAO;
     }
 
-    public void agregarLocalidad(Localidad localidad) {
+    public void agregarLocalidad(Localidad2 localidad) {
         try {
             localidadDAO.insertarLocalidad(localidad);
             LOGGER.info("Localidad agregada con éxito: " + localidad.getNombre());
@@ -26,7 +26,7 @@ public class LocalidadService {
         }
     }
 
-    public List<Localidad> obtenerLocalidades() {
+    public List<Localidad2> obtenerLocalidades() {
         try {
             return localidadDAO.obtenerTodasLasLocalidades();
         } catch (SQLException e) {
@@ -35,7 +35,7 @@ public class LocalidadService {
         }
     }
 
-    public void actualizarLocalidad(Localidad localidad) {
+    public void actualizarLocalidad(Localidad2 localidad) {
         try {
             localidadDAO.actualizarLocalidad(localidad);
             LOGGER.info("Localidad actualizada con éxito: " + localidad.getNombre());

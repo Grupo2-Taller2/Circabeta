@@ -2,7 +2,7 @@ package com.ejemplo.carmenuy.dao;
 
 import com.ejemplo.carmenuy.model.Detective;
 import com.ejemplo.carmenuy.model.Grafo;
-import com.ejemplo.carmenuy.model.Localidad;
+import com.ejemplo.carmenuy.model.Localidad2;
 import com.ejemplo.carmenuy.model.Nodo;
 import com.ejemplo.carmenuy.model.Partida;
 import com.ejemplo.carmenuy.model.Rango;
@@ -47,7 +47,7 @@ public class PartidaDAO {
                 Nodo nodoDetective = grafo.obtenerNodo(nodoDetectiveNombre);
                 Nodo nodoObjetivo = grafo.obtenerNodo(nodoObjetivoNombre);
 
-                Localidad localidadDetective = new Localidad(nodoDetective.getNombre(), "Descripción", 0.0, 0.0); // Ajustar según sea necesario
+                Localidad2 localidadDetective = new Localidad2(nodoDetective.getNombre(), "Descripción", 0.0, 0.0); // Ajustar según sea necesario
                 Detective detective = new Detective(detectiveNombre, "", Rango.DETECTIVE_JUNIOR, localidadDetective);
 
                 // Lista de secuaces vacía por ahora

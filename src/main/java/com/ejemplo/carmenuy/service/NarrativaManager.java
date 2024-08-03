@@ -1,6 +1,6 @@
 package com.ejemplo.carmenuy.service;
 
-import com.ejemplo.carmenuy.model.Localidad;
+import com.ejemplo.carmenuy.model.Localidad2;
 import com.ejemplo.carmenuy.model.Grafo;
 import com.ejemplo.carmenuy.model.Nodo;
 
@@ -32,7 +32,7 @@ public class NarrativaManager {
         letrasPorLocalidad.put("Salto", "B");
     }
 
-    public String generarNarrativa(Localidad localidad) {
+    public String generarNarrativa(Localidad2 localidad) {
         String letra = letrasPorLocalidad.getOrDefault(localidad.getNombre(), "X");
         String narrativaBase = narrativas.getOrDefault(letra,
                 "Te encuentras en " + localidad.getNombre() + " (Localidad " + letra + "). [Narrativa por defecto]");

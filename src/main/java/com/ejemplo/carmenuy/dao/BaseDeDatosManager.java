@@ -1,12 +1,12 @@
 package com.ejemplo.carmenuy.dao;
 
-import com.ejemplo.carmenuy.model.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import modelo.Usuario;
 
 /**
  * Clase que gestiona la conexión a la base de datos y las operaciones relacionadas con los usuarios.
@@ -42,7 +42,7 @@ public class BaseDeDatosManager {
             statement.setString(2, usuario.getApellido());
             statement.setString(3, usuario.getContrasena());
             statement.setString(4, usuario.getRango());
-            statement.setInt(5, usuario.getCapturas());
+            statement.setInt(5, usuario.getCaptura());
             statement.setString(6, usuario.getProgreso());
             statement.executeUpdate();
         }
@@ -54,15 +54,15 @@ public class BaseDeDatosManager {
             statement.setString(1, nombre);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
-                return new Usuario(
-                        resultSet.getInt("id"),
-                        resultSet.getString("nombre"),
-                        resultSet.getString("apellido"),
-                        resultSet.getString("contrasena"),
-                        resultSet.getString("rango"),
-                        resultSet.getInt("capturas"),
-                        resultSet.getString("progreso")
-                );
+//                return new Usuario(
+//                        resultSet.getInt("id"),
+//                        resultSet.getString("nombre"),
+//                        resultSet.getString("apellido"),
+//                        resultSet.getString("contrasena"),
+//                        resultSet.getString("rango"),
+//                        resultSet.getInt("capturas"),
+//                        resultSet.getString("progreso")
+//                );
             }
         }
         return null;
@@ -75,7 +75,7 @@ public class BaseDeDatosManager {
             statement.setString(2, usuario.getApellido());
             statement.setString(3, usuario.getContrasena());
             statement.setString(4, usuario.getRango());
-            statement.setInt(5, usuario.getCapturas());
+            statement.setInt(5, usuario.getCaptura());
             statement.setString(6, usuario.getProgreso());
             statement.setInt(7, usuario.getId());
             statement.executeUpdate();

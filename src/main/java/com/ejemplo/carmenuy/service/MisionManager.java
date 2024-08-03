@@ -3,7 +3,7 @@ package com.ejemplo.carmenuy.service;
 import com.ejemplo.carmenuy.dao.LocalidadDAO;
 import com.ejemplo.carmenuy.dao.MisionDAO;
 import com.ejemplo.carmenuy.model.Detective;
-import com.ejemplo.carmenuy.model.Localidad;
+import com.ejemplo.carmenuy.model.Localidad2;
 import com.ejemplo.carmenuy.model.Mision;
 import com.ejemplo.carmenuy.model.Rango;
 import com.ejemplo.carmenuy.model.Secuaz;
@@ -21,7 +21,7 @@ public class MisionManager {
     private List<Secuaz> secuaces;
     private Secuaz carmenSandiego;
     private Detective detective;
-    private List<Localidad> localidades;
+    private List<Localidad2> localidades;
     private boolean juegoTerminado;
 
     public MisionManager(Connection connection) {
@@ -33,7 +33,7 @@ public class MisionManager {
         this.detective = inicializarDetective();
     }
 
-    private List<Localidad> cargarLocalidades() {
+    private List<Localidad2> cargarLocalidades() {
         try {
             return localidadDAO.obtenerTodasLasLocalidades();
         } catch (SQLException e) {
@@ -52,10 +52,10 @@ public class MisionManager {
 
     private List<Secuaz> inicializarSecuaces() {
         var secuaces = new ArrayList<Secuaz>();
-        secuaces.add(new Secuaz("Betosecreto", "Escalador, experto en artes ninja y espionaje", 5));
-        secuaces.add(new Secuaz("Ellabella", "Experta en estafas", 4));
-        secuaces.add(new Secuaz("Mindy Ana Son", "Arqueóloga experta en gemas", 3));
-        secuaces.add(new Secuaz("Moonabomber", "Experto en explosivos", 5));
+//        secuaces.add(new Secuaz("Betosecreto", "Escalador, experto en artes ninja y espionaje", 5));
+//        secuaces.add(new Secuaz("Ellabella", "Experta en estafas", 4));
+//        secuaces.add(new Secuaz("Mindy Ana Son", "Arqueóloga experta en gemas", 3));
+//        secuaces.add(new Secuaz("Moonabomber", "Experto en explosivos", 5));
         for (var secuaz : secuaces) {
             secuaz.setLocalidad(localidades.get(new Random().nextInt(localidades.size())));
         }
@@ -63,7 +63,7 @@ public class MisionManager {
     }
 
     private Secuaz inicializarCarmenSandiego() {
-        var carmenSandiego = new Secuaz("Carmen Sandiego", "Líder criminal", 10);
+//        var carmenSandiego = new Secuaz("Carmen Sandiego", "Líder criminal", 10);
         carmenSandiego.setLocalidad(localidades.get(new Random().nextInt(localidades.size())));
         return carmenSandiego;
     }

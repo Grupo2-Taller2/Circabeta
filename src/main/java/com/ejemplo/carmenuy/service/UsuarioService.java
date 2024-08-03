@@ -1,11 +1,11 @@
 package com.ejemplo.carmenuy.service;
 
 import com.ejemplo.carmenuy.dao.UsuarioDAO;
-import com.ejemplo.carmenuy.model.Usuario;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.logging.Logger;
+import modelo.Usuario;
 
 public class UsuarioService {
     private static final Logger LOGGER = Logger.getLogger(UsuarioService.class.getName());

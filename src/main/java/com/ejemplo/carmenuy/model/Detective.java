@@ -12,7 +12,7 @@ public class Detective {
     private Rango rango;
     private int movimientos;
     private int capturas; // Número de capturas realizadas
-    private Localidad localidad; // Localidad actual del detective
+    private Localidad2 localidad; // Localidad2 actual del detective
 
     /**
      * Constructor para crear una instancia de Detective.
@@ -23,7 +23,7 @@ public class Detective {
      * @param localidad La localidad inicial del detective.
      * @throws IllegalArgumentException si algún parámetro es nulo o vacío.
      */
-    public Detective(String nombre, String apellido, Rango rango, Localidad localidad) {
+    public Detective(String nombre, String apellido, Rango rango, Localidad2 localidad) {
         this.nombre = validarString(nombre, "El nombre no puede ser nulo o vacío");
         this.apellido = validarString(apellido, "El apellido no puede ser nulo o vacío");
         this.rango = Objects.requireNonNull(rango, "El rango no puede ser nulo");
@@ -72,11 +72,11 @@ public class Detective {
         this.movimientos = calcularMovimientosIniciales(rango);
     }
 
-    public Localidad getLocalidad() {
+    public Localidad2 getLocalidad() {
         return localidad;
     }
 
-    public void setLocalidad(Localidad localidad) {
+    public void setLocalidad(Localidad2 localidad) {
         this.localidad = localidad;
     }
 

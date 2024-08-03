@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  */
 public class DatabaseInitialization {
     private static final Logger logger = Logger.getLogger(DatabaseInitialization.class.getName());
-    private static final String URL = "jdbc:sqlite:F:/sqlite/carmen_sandiego.db";
+    private static final String URL = "jdbc:sqlite:C:/sqlite/carmen_sandiego.db";
 
     /**
      * Establece la conexión con la base de datos.

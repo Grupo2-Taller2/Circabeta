@@ -1,7 +1,7 @@
 package com.ejemplo.carmenuy.service;
 
 import com.ejemplo.carmenuy.dao.PistaDAO;
-import com.ejemplo.carmenuy.model.Pista;
+import com.ejemplo.carmenuy.model.Pista2;
 import com.ejemplo.carmenuy.exception.PistaException;
 
 import java.sql.Connection;
@@ -19,7 +19,7 @@ public class PistaService {
         this.pistaDAO = pistaDAO;
     }
 
-    public void insertarPista(Pista pista) throws PistaException {
+    public void insertarPista(Pista2 pista) throws PistaException {
         try {
             pistaDAO.insertarPista(pista);
         } catch (SQLException e) {
@@ -27,7 +27,7 @@ public class PistaService {
         }
     }
 
-    public Pista obtenerPistaPorId(int id) throws PistaException {
+    public Pista2 obtenerPistaPorId(int id) throws PistaException {
         try {
             return pistaDAO.obtenerPistaPorId(id);
         } catch (SQLException e) {
@@ -43,7 +43,7 @@ public class PistaService {
         }
     }
 
-    public List<Pista> obtenerTodasLasPistas() throws PistaException {
+    public List<Pista2> obtenerTodasLasPistas() throws PistaException {
         try {
             return pistaDAO.obtenerTodasLasPistas();
         } catch (SQLException e) {
@@ -51,7 +51,7 @@ public class PistaService {
         }
     }
 
-    public void actualizarPista(Pista pista) throws PistaException {
+    public void actualizarPista(Pista2 pista) throws PistaException {
         try {
             pistaDAO.actualizarPista(pista);
         } catch (SQLException e) {

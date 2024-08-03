@@ -52,7 +52,7 @@ public class Partida {
     public void moverDetective(Nodo nuevoNodo) {
         if (sonNodosAdyacentes(nodoDetective, nuevoNodo)) {
             nodoDetective = nuevoNodo;
-            detective.setLocalidad(new Localidad(nuevoNodo.getNombre(), "Descripción", nuevoNodo.getX(), nuevoNodo.getY()));
+            detective.setLocalidad(new Localidad2(nuevoNodo.getNombre(), "Descripción", nuevoNodo.getX(), nuevoNodo.getY()));
         } else {
             throw new IllegalArgumentException("El nodo destino no es adyacente al nodo actual del detective.");
         }

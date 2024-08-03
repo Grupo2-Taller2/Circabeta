@@ -7,7 +7,7 @@ public class Jugador {
     private String contrasena;
     private Detective detective;
 
-    public Jugador(String nombre, String contrasena, Localidad localidadInicial) {
+    public Jugador(String nombre, String contrasena, Localidad2 localidadInicial) {
         this.nombre = nombre;
         this.contrasena = contrasena;
         this.detective = new Detective(nombre, "", Rango.DETECTIVE_JUNIOR, localidadInicial);

@@ -14,7 +14,7 @@ public class Nodo {
     private final Map<Nodo, Integer> distancias;
     private final double x; // Coordenadas para cálculo de distancia
     private final double y;
-    private Localidad localidad;
+    private Localidad2 localidad;
 
     public Nodo(String nombre, double x, double y) {
         this.nombre = nombre;
@@ -47,11 +47,11 @@ public class Nodo {
         return y;
     }
 
-    public Localidad getLocalidad() {
+    public Localidad2 getLocalidad() {
         return localidad;
     }
 
-    public void setLocalidad(Localidad localidad) {
+    public void setLocalidad(Localidad2 localidad) {
         this.localidad = localidad;
     }
 
