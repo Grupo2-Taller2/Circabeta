@@ -47,7 +47,7 @@ public class ControladorLogin implements ActionListener { // para poder escuchar
         if (e.getSource() == vistaLogin.getjBtnIngresar()) { // si el evento fue generado por el botón getjBtnIngresar
 
             // ### BORRAR datos de prueba ###
-            Usuario usuarioPrueba = new Usuario(1, "Papanata", "Lopez", "superPapa", "123", "Novato", 1, "Nivel 1");
+            Usuario usuarioPrueba = new Usuario(1, "Pepe", "Lopez", "superPepe", "123", "Novato", 1, "Nivel 1");
             modeloUsuario.getListaUsuarios().add(usuarioPrueba);
             
             

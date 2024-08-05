@@ -89,7 +89,10 @@ public class LocalidadDAO {
                 double longitud = resultSet.getDouble("longitud");
                 localidades.add(new Localidad2(id, nombre, descripcion, latitud, longitud));
             }
+        }catch(Exception e){
+            e.printStackTrace();
         }
+        
         return localidades;
     }
 

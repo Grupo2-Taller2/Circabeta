@@ -2,10 +2,15 @@ package com.ejemplo.carmenuy.ui;
 
 
 
-import com.ejemplo.carmenuy.ui.rc.VBienvenida;
-import modelo.Localidad;
+import com.ejemplo.carmenuy.database.DatabaseInitialization;
+import com.ejemplo.carmenuy.dao.LocalidadDAO;
+import com.ejemplo.carmenuy.model.Localidad2;
+import java.sql.SQLException;
+import modelo.*;
 import javax.swing.*;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import modelo.MapaDeUruguay;
 
 public class VJuego2 extends JFrame{
@@ -142,8 +147,20 @@ public class VJuego2 extends JFrame{
     }//GEN-LAST:event_BuscarActionPerformed
 
     private void ElegirLugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElegirLugarActionPerformed
+        List<String> nombres=null;
+        LocalidadDAO l = new LocalidadDAO(new DatabaseInitialization().getConnection());
+        try {
+            List<Localidad2> localidades = l.obtenerTodasLasLocalidades();
+        } catch (SQLException ex) {
+            Logger.getLogger(VJuego2.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        for(int i = 0;i < localidades.size(); i++){
+            nombres.add(localidades.get(i).getNombre());
+        }
+        Object [] deptos = nombres.toArray();
         Object [] colores ={"Artigas","Salto","Paysandú","Rio Negro","Rivera","Tacuarembo","Soriano", "Flores", "Cerro Largo","Durazno", "Rocha", "Florida", "Lavalleja", "Treinta y Tres", "Canelones", "San José", "Maldonado", "Colonia", "Montevideo"}; 
-        Object seleccion=JOptionPane.showInputDialog(null,"Selecciona un departamento", "Elegir",JOptionPane.QUESTION_MESSAGE,null,colores, colores[0]);
+        Object seleccion=JOptionPane.showInputDialog(null,"Selecciona un departamento", "Elegir",JOptionPane.QUESTION_MESSAGE,null,deptos, deptos[0]);
+        JOptionPane.showConfirmDialog(rootPane, seleccion);
     }//GEN-LAST:event_ElegirLugarActionPerformed
 
     private void PISTAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PISTAActionPerformed

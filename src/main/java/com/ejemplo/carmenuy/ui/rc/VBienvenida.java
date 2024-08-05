@@ -141,7 +141,7 @@ public class VBienvenida extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabBienvenidos)
-                        .addGap(0, 20, Short.MAX_VALUE))
+                        .addGap(0, 133, Short.MAX_VALUE))
                     .addComponent(jScrollPane1))
                 .addContainerGap())
         );
@@ -152,7 +152,7 @@ public class VBienvenida extends javax.swing.JFrame {
                 .addComponent(jLabBienvenidos)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         jLabImagenj.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

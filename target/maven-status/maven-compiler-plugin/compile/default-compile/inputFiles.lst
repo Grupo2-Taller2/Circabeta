@@ -1,46 +1,58 @@
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\dao\SecuazDAO.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\tts\TTSManager.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\tts\ITTSManager.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\Mision.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\CSD.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\dao\PartidaDAO.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\Main.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\ui\VentanaAyudaVisual.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\Detective.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\Localidad.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\Usuario.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\Jugador.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\ui\VentanaLogin.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\service\AudioManager.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\dao\PistaDAO.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\database\DatabaseInitialization.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\service\PistaService.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\ui\VentanaRegistro.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\ui\VentanaFinal.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\ui\VentanaJuego.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\Secuaz.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\service\DatabaseInitializationService.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\exception\PistaException.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\service\AccesibilidadManager.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\dao\UsuarioDAO.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\config\GitIgnoreConfig.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\service\UsuarioService.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\dao\BaseDeDatosManager.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\Partida.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\manager\GitIgnoreManager.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\Constants.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\service\ConfigService.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\Nodo.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\service\MisionManager.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\service\JuegoService.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\Pista.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\service\GrafoService.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\Grafo.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\service\LocalidadService.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\ui\VentanaCaptura.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\dao\MisionDAO.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\exception\LocalidadNotFoundException.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\model\Rango.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\ui\InputManager.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\service\NarrativaManager.java
-F:\CERP\UYCSD JAVA 17\CarmenSandiegoUruguay\src\main\java\com\ejemplo\carmenuy\dao\LocalidadDAO.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\UsuarioService.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\MapaDeUruguay.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Usuario.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\control\ControladorLogin.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\ConfigService.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Constants.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\rc\VLogin.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\manager\GitIgnoreManager.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\exception\LocalidadNotFoundException.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\PistaService.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\VentanaLogin.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\dao\MisionDAO.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\AudioManager.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\VentanaJuego.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\exception\PistaException.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Secuaz.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\AccesibilidadManager.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\Main.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\CSD.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Pista.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\tts\ITTSManager.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\dao\UsuarioDAO.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\DatabaseInitializationService.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Localidad.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\NarrativaManager.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\GrafoService.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\VentanaAyudaVisual.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\InputManager.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\VentanaRegistro.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Localidad2.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Ubicacion.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Usuario2.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\config\GitIgnoreConfig.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\dao\BaseDeDatosManager.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Personaje.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\dao\PartidaDAO.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\rc\ImagePaneUtil.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Grafo.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\dao\SecuazDAO.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\tts\TTSManager.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\dao\LocalidadDAO.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Pista2.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\VJuego2.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\dao\PistaDAO.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Rango.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\ModeloUsuario.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\VentanaFinal.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Partida.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\VentanaCaptura.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Nodo.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Jugador.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Mision.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Detective.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\JuegoService.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\MisionManager.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\database\DatabaseInitialization.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\rc\VBienvenida.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\LocalidadService.java

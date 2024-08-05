@@ -11,13 +11,16 @@ import java.util.logging.Logger;
  */
 public class DatabaseInitialization {
     private static final Logger logger = Logger.getLogger(DatabaseInitialization.class.getName());
-    private static final String URL = "jdbc:sqlite:C:/sqlite/carmen_sandiego.db";
+    private static final String URL = "jdbc:sqlite:C:\\carmen_sandiego.db";
 
+    public DatabaseInitialization(){
+        
+    }
     /**
      * Establece la conexión con la base de datos.
      * @return una conexión a la base de datos.
      */
-    public static Connection getConnection() {
+    public Connection getConnection() {
         try {
             // Cargar el driver de SQLite, si es necesario
             Class.forName("org.sqlite.JDBC");
@@ -37,14 +40,14 @@ public class DatabaseInitialization {
      * Método principal para verificar la conexión.
      */
     public static void main(String[] args) {
-        Connection conn = getConnection();
-        if (conn != null) {
+        //Connection conn = getConnection();
+        /*if (conn != null) {
             try {
                 conn.close();
                 logger.log(Level.INFO, "Conexión cerrada exitosamente.");
             } catch (SQLException e) {
                 logger.log(Level.SEVERE, "Error al cerrar la conexión", e);
             }
-        }
+        }*/
     }
 }
