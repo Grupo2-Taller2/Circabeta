@@ -38,7 +38,8 @@ public class PistaDAO {
 //        }
     }
 
-    public void insertarPistasIniciales() throws SQLException {
+    // este mtodo era void, no tena sentido crear las pistas y no retornarlas
+    public List<Pista2> insertarPistasIniciales() throws SQLException {
         List<Pista2> pistasIniciales = new ArrayList<>();
         String[] localidades = new String[]{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "AA", "AB", "AC", "AD", "AE", "AF", "AG", "AH", "AI", "AJ", "AK", "AL", "AM", "AN"};
 
@@ -51,6 +52,7 @@ public class PistaDAO {
         for (Pista2 pista : pistasIniciales) {
             insertarPista(pista);
         }
+        return pistasIniciales;
     }
 
     public Pista2 obtenerPistaPorId(int id) throws SQLException {

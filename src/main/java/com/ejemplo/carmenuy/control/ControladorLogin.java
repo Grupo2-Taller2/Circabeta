@@ -1,5 +1,6 @@
 package com.ejemplo.carmenuy.control;
 
+import com.ejemplo.carmenuy.database.DatabaseInitialization;
 import com.ejemplo.carmenuy.model.ModeloUsuario;
 import com.ejemplo.carmenuy.model.Usuario;
 import com.ejemplo.carmenuy.ui.rc.VLogin;
@@ -7,6 +8,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import com.ejemplo.carmenuy.ui.rc.VBienvenida;
 import com.ejemplo.carmenuy.ui.VJuego2;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.file.Paths;
+import java.sql.Statement;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -20,11 +27,22 @@ public class ControladorLogin implements ActionListener { // para poder escuchar
     private VLogin vistaLogin;
     private VBienvenida vBienvenida;
     private VJuego2 vJuego;
+    DatabaseInitialization connection; // el controlador tiene una instancia de la conexion (la unica de todo el oprograma)
 
     // constructor privado (evita usar el operador new)
     private ControladorLogin() {
         modeloUsuario = new ModeloUsuario(); // cargar los usuarios de la BD
+        connection = new DatabaseInitialization(); // crea una conexion
+        connection.getConnection(); // ejecuta la conexion
+        // se obtiene la ruta absoluta del proyecto y luego se le concatena la ruta al archivo
+        String projectPath = Paths.get("").toAbsolutePath().toString();
+        String dbPath = projectPath + "\\src\\main\\resources\\db\\crear_tablas.sql";
+        //String dbPath = projectPath + "\\db\\crear_tablas.sql";
+
+        connection.ejecutarSqlScript();
+       
     }
+    
 
     // Singleton: cuando se crea el controlador, crea una ventana
     public static ControladorLogin obtenerInstancia() {
@@ -84,6 +102,31 @@ public class ControladorLogin implements ActionListener { // para poder escuchar
             vBienvenida.setVisible(true); // la mostramos al usuario
         } else {
             vistaLogin.mostrarMensaje("Nombre de usuario o contraseña incorrectos");
+        }
+    }
+    
+    // este mtodo hay que moverlo a un service
+    public void ejecutarSqlScript(String filePath) {
+        try {
+            // Cargar el archivo SQL desde resources
+            InputStream inputStream = getClass().getClassLoader().getResourceAsStream(filePath);
+            if (inputStream == null) {
+                throw new IllegalArgumentException("Archivo SQL no encontrado: " + filePath);
+            }
+
+            // Leer el archivo SQL
+            String sql = new BufferedReader(new InputStreamReader(inputStream)) // inputStream es URL 
+                    .lines().collect(Collectors.joining("\n"));
+
+            // Crear una declaración para ejecutar el SQL
+            Statement statement = connection.createStatement();
+            
+            // Ejecutar el SQL
+            statement.execute(sql);
+            System.out.println("Script SQL ejecutado exitosamente.");
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
