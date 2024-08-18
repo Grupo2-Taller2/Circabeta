@@ -19,6 +19,8 @@ C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\Ma
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\CSD.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Pista.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\tts\ITTSManager.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\rc\VJuego2.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\database\ConexionSQLite.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\dao\UsuarioDAO.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\DatabaseInitializationService.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Localidad.java
@@ -32,6 +34,7 @@ C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\mo
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Usuario2.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\config\GitIgnoreConfig.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\dao\BaseDeDatosManager.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\UsuarioLogin.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Personaje.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\dao\PartidaDAO.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\rc\ImagePaneUtil.java
@@ -40,12 +43,12 @@ C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\da
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\tts\TTSManager.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\dao\LocalidadDAO.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Pista2.java
-C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\VJuego2.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\dao\PistaDAO.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Rango.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\ModeloUsuario.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\VentanaFinal.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Partida.java
+C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\service\SQLiteService.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\ui\VentanaCaptura.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Nodo.java
 C:\Users\20268919\Documents\Beta\Circabeta\src\main\java\com\ejemplo\carmenuy\model\Jugador.java

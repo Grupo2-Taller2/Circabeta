@@ -18,9 +18,9 @@ public class VLogin extends javax.swing.JFrame {
     private ControladorLogin controlador;
 
     private JLabel jLbUsuario1;
-    private JTextField jTextFUsuario;
+    private JTextField txtUser;
     private JLabel jLbContraseña;
-    private JPasswordField jPrdFContraseña;
+    private JPasswordField txtPass;
     private JLabel jLabIrReg;
     private JLabel jLabImagen;
     private JButton jBtnIngresar;
@@ -49,8 +49,8 @@ public class VLogin extends javax.swing.JFrame {
         jLbContraseña = new javax.swing.JLabel();
         jLbUsuario1 = new javax.swing.JLabel();
         jBtnIngresar = new javax.swing.JButton();
-        jTextFUsuario = new javax.swing.JTextField();
-        jPrdFContraseña = new javax.swing.JPasswordField();
+        txtUser = new javax.swing.JTextField();
+        txtPass = new javax.swing.JPasswordField();
         jLabIrReg = new javax.swing.JLabel();
         jLabImagen = new javax.swing.JLabel();
         jLabInicioSesion = new javax.swing.JLabel();
@@ -79,8 +79,6 @@ public class VLogin extends javax.swing.JFrame {
         jLabIrReg.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabIrReg.setText("Registrate AQUÍ!");
 
-        jLabImagen.setIcon(new javax.swing.ImageIcon("C:\\Users\\Classroom\\Downloads\\CarmenSandiegoUyzip\\CarmenSandiegoUy\\src\\main\\java\\imagenes\\CarmenSandiego.png")); // NOI18N
-
         jLabInicioSesion.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabInicioSesion.setText("Inicio de Sesión");
 
@@ -97,8 +95,8 @@ public class VLogin extends javax.swing.JFrame {
                             .addComponent(jLbContraseña))
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFUsuario)
-                            .addComponent(jPrdFContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtUser)
+                            .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(122, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabIrReg, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -120,18 +118,18 @@ public class VLogin extends javax.swing.JFrame {
                 .addGap(9, 9, 9)
                 .addComponent(jLabInicioSesion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 121, Short.MAX_VALUE)
+                .addComponent(jLabImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLbUsuario1)
-                    .addComponent(jTextFUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLbContraseña))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jPrdFContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabIrReg)
@@ -190,8 +188,8 @@ public class VLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabIrReg;
     private javax.swing.JLabel jLbContraseña;
     private javax.swing.JLabel jLbUsuario1;
-    private javax.swing.JPasswordField jPrdFContraseña;
-    private javax.swing.JTextField jTextFUsuario;
+    private javax.swing.JPasswordField txtPass;
+    private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
    });
 
@@ -206,7 +204,7 @@ public class VLogin extends javax.swing.JFrame {
     }
 
     public JTextField getjTextFUsuario() {
-        return jTextFUsuario;
+        return txtUser;
     }
 
     public JLabel getjLbContraseña() {
@@ -214,7 +212,7 @@ public class VLogin extends javax.swing.JFrame {
     }
 
     public JPasswordField getjPrdFContraseña() {
-        return jPrdFContraseña;
+        return txtPass;
     }
 
     public JLabel getjLabIrReg() {
@@ -240,4 +238,21 @@ public class VLogin extends javax.swing.JFrame {
     public void mostrarMensaje(String msj) {
         JOptionPane.showMessageDialog(null, msj);
     }
+
+    public JTextField getTxtUser() {
+        return txtUser;
+    }
+
+    public void setTxtUser(JTextField txtUser) {
+        this.txtUser = txtUser;
+    }
+
+    public JPasswordField getTxtPass() {
+        return txtPass;
+    }
+
+    public void setTxtPass(JPasswordField txtPass) {
+        this.txtPass = txtPass;
+    }
+    
 }
