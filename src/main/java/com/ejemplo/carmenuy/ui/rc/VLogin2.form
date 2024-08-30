@@ -43,9 +43,8 @@
                       <EmptySpace pref="122" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      <Component id="jButReg" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jLabIrReg" min="-2" pref="148" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="jBtnIngresar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
@@ -69,7 +68,7 @@
               <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
               <Component id="jLabInicioSesion" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabImagen" max="32767" attributes="0"/>
+              <Component id="jLabImagen" pref="121" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLbUsuario1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -86,9 +85,9 @@
                   </Group>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jBtnIngresar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButReg" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jLabIrReg" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBtnIngresar" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
           </Group>
@@ -130,12 +129,15 @@
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtPass">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabImagen">
+    <Component class="javax.swing.JLabel" name="jLabIrReg">
       <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/CarmenSandiego.png"/>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="14" style="3"/>
         </Property>
+        <Property name="text" type="java.lang.String" value="Registrate AQU&#xcd;!"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabImagen">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabInicioSesion">
       <Properties>
@@ -143,11 +145,6 @@
           <Font name="Segoe UI" size="14" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Inicio de Sesi&#xf3;n"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButReg">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Registrate AQU&#xcd;!"/>
       </Properties>
     </Component>
   </SubComponents>

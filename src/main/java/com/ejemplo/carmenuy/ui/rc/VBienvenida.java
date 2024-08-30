@@ -1,6 +1,6 @@
 package com.ejemplo.carmenuy.ui.rc;
 
-import com.ejemplo.carmenuy.control.ControladorLogin;
+import com.ejemplo.carmenuy.control.ControladorLogin2;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -29,7 +29,7 @@ public class VBienvenida extends javax.swing.JFrame {
     private VBienvenida() {
         initComponents();
         this.setLocationRelativeTo(null);
-        jBtn1IniciarJuego.addActionListener(ControladorLogin.obtenerInstancia());
+        jBtn1IniciarJuego.addActionListener(ControladorLogin2.obtenerInstancia());
     }
 
     // SINGLETON (patrón de diseño)
@@ -118,13 +118,19 @@ public class VBienvenida extends javax.swing.JFrame {
         jLabBienvenidos.setText("Bienvenid@s al juego ¿Dónde, en Uruguay,  está Carmen Sandiego?");
 
         jTextArIntro.setEditable(false);
+        jTextArIntro.setBackground(new java.awt.Color(102, 102, 102));
         jTextArIntro.setColumns(20);
-        jTextArIntro.setForeground(new java.awt.Color(153, 0, 0));
+        jTextArIntro.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jTextArIntro.setForeground(new java.awt.Color(255, 255, 255));
         jTextArIntro.setLineWrap(true);
         jTextArIntro.setRows(20);
-        jTextArIntro.setText("¡Detective, tu misión comienza ahora!\n                Carmen Sandiego, la maestra del disfraz y la reina del robo, ha vuelto a hacer de las suyas. Esta vez, ha puesto su mirada en los tesoros culturales, históricos y naturales de Uruguay.\n\n Tu tarea es seguir sus pistas y detenerla antes de que desaparezca con los valiosos patrimonios de nuestro hermoso país.\n\n\n                ¿Cómo jugar?\n                Sigue las pistas: Carmen ha dejado pistas a lo largo de los 19 departamentos de Uruguay. Usa tu ingenio y conocimientos para seguir su rastro.\n                Resuelve acertijos: Cada pista te llevará a resolver acertijos que te acercarán más a su paradero.\n\n\n                Explora Uruguay: Aprende sobre la geografía, historia y cultura de Uruguay mientras persigues a Carmen por todo el país.\n                Captura a Carmen: Reúne suficientes pruebas y atrapa a Carmen antes de que logre escapar de nuevo.\n                ¡Comencemos la aventura!\n                Haz clic en \"Iniciar Juego\" para empezar tu búsqueda. Buena suerte, detective. ¡El destino de los tesoros uruguayos está en tus manos!\n            ");
+        jTextArIntro.setText("¡Detective, tu misión comienza ahora!\n\n                Carmen Sandiego, la maestra del disfraz y la reina del robo, ha vuelto a hacer de las suyas.\n               Esta  vez, ha puesto su mirada en los tesoros culturales, históricos y naturales de Uruguay.\n\n              Tu tarea es seguir sus pistas y detenerla antes de que desaparezca con los valiosos patrimonios\n              de  nuestro hermoso país.\n\n                ¿Cómo jugar?\n                Sigue las pistas: Carmen ha dejado pistas a lo largo de los 19 departamentos de Uruguay.\n               Usa tu  ingenio y conocimientos para seguir su rastro.\n                Resuelve acertijos: Cada pista te llevará a resolver acertijos que te acercarán más a su paradero.\n\n                Explora Uruguay: Aprende sobre la geografía, historia y cultura de Uruguay mientras persigues                  a Carmen por todo el país.\n                Captura a Carmen: Reúne suficientes pruebas y atrapa a Carmen antes de que logre escapar de                     nuevo.\n\n                ¡Comencemos la aventura!\n                Haz clic en \"Iniciar Juego\" para empezar tu búsqueda. Buena suerte, detective.\n              ¡El destino de los tesoros uruguayos está en tus manos!\n            ");
         jTextArIntro.setWrapStyleWord(true);
         jTextArIntro.setBorder(null);
+        jTextArIntro.setFocusCycleRoot(true);
+        jTextArIntro.setMaximumSize(new java.awt.Dimension(1000, 600));
+        jTextArIntro.setMinimumSize(new java.awt.Dimension(1000, 600));
+        jTextArIntro.setPreferredSize(new java.awt.Dimension(1000, 600));
         jTextArIntro.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 jTextArIntroComponentShown(evt);
@@ -138,12 +144,11 @@ public class VBienvenida extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabBienvenidos)
-                        .addGap(0, 133, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1))
-                .addContainerGap())
+                .addComponent(jLabBienvenidos)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 9, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 696, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,11 +156,12 @@ public class VBienvenida extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabBienvenidos)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(51, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 539, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabImagenj.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabImagenj.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Secuaz y CarmenSandiego.jpg"))); // NOI18N
 
         jBtn1IniciarJuego.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jBtn1IniciarJuego.setForeground(new java.awt.Color(102, 102, 102));
@@ -172,28 +178,30 @@ public class VBienvenida extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 725, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addContainerGap(20, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 705, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabImagenj, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(96, 96, 96)
                         .addComponent(jBtn1IniciarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(92, 92, 92))))
+                        .addGap(92, 92, 92))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabImagenj, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(45, 45, 45))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabImagenj, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBtn1IniciarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(137, Short.MAX_VALUE))))
+                        .addGap(0, 81, Short.MAX_VALUE)
+                        .addComponent(jLabImagenj, javax.swing.GroupLayout.PREFERRED_SIZE, 378, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(58, 58, 58)
+                        .addComponent(jBtn1IniciarJuego, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(30, 30, 30))
         );
 
         pack();

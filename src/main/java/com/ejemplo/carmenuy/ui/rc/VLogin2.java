@@ -11,9 +11,9 @@ import javax.swing.JTextField;
  *
  * @author 32681391
  */
-public class VLogin extends javax.swing.JFrame {
+public class VLogin2 extends javax.swing.JFrame {
 
-    private static VLogin instancia; // autoreferencia
+    private static VLogin2 instancia; // autoreferencia
 
     private ControladorLogin2 controlador;
 
@@ -21,23 +21,22 @@ public class VLogin extends javax.swing.JFrame {
     private JTextField txtUser;
     private JLabel jLbContraseña;
     private JPasswordField txtPass;
-    private JButton jButReg;
+    private JLabel jLabIrReg;
     private JLabel jLabImagen;
     private JButton jBtnIngresar;
     private JLabel jLabInicioSesion;
 
-    private VLogin() {
+    private VLogin2() {
         initComponents();
         this.setLocationRelativeTo(null);
         jBtnIngresar.addActionListener(ControladorLogin2.obtenerInstancia());
-        jButReg.addActionListener(ControladorLogin2.obtenerInstancia());
         // asignar oyente al botón. Se assigna el controlador mediante singleton
     }
 
     // SINGLETON (patrón de diseño)
-    public static VLogin obtenerInstancia() {
+    public static VLogin2 obtenerInstancia() {
         if (instancia == null) {
-            instancia = new VLogin();
+            instancia = new VLogin2();
         }
         return instancia;
     }
@@ -52,9 +51,9 @@ public class VLogin extends javax.swing.JFrame {
         jBtnIngresar = new javax.swing.JButton();
         txtUser = new javax.swing.JTextField();
         txtPass = new javax.swing.JPasswordField();
+        jLabIrReg = new javax.swing.JLabel();
         jLabImagen = new javax.swing.JLabel();
         jLabInicioSesion = new javax.swing.JLabel();
-        jButReg = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -77,12 +76,11 @@ public class VLogin extends javax.swing.JFrame {
             }
         });
 
-        jLabImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/CarmenSandiego.png"))); // NOI18N
+        jLabIrReg.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        jLabIrReg.setText("Registrate AQUÍ!");
 
         jLabInicioSesion.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         jLabInicioSesion.setText("Inicio de Sesión");
-
-        jButReg.setText("Registrate AQUÍ!");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,9 +99,8 @@ public class VLogin extends javax.swing.JFrame {
                             .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(122, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButReg)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabIrReg, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jBtnIngresar)
                         .addGap(30, 30, 30))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -121,7 +118,7 @@ public class VLogin extends javax.swing.JFrame {
                 .addGap(9, 9, 9)
                 .addComponent(jLabInicioSesion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabImagen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabImagen, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLbUsuario1)
@@ -134,9 +131,9 @@ public class VLogin extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBtnIngresar)
-                    .addComponent(jButReg))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabIrReg)
+                    .addComponent(jBtnIngresar))
                 .addGap(116, 116, 116))
         );
 
@@ -164,14 +161,16 @@ public class VLogin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VLogin2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VLogin2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VLogin2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VLogin2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
@@ -179,16 +178,16 @@ public class VLogin extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new VLogin().setVisible(true);
+                new VLogin2().setVisible(true);
 
             }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtnIngresar;
-    private javax.swing.JButton jButReg;
     private javax.swing.JLabel jLabImagen;
     private javax.swing.JLabel jLabInicioSesion;
+    private javax.swing.JLabel jLabIrReg;
     private javax.swing.JLabel jLbContraseña;
     private javax.swing.JLabel jLbUsuario1;
     private javax.swing.JPasswordField txtPass;
@@ -218,8 +217,8 @@ public class VLogin extends javax.swing.JFrame {
         return txtPass;
     }
 
-    public JButton getjButReg() {
-        return jButReg;
+    public JLabel getjLabIrReg() {
+        return jLabIrReg;
     }
 
     public JLabel getjLabImagen() {

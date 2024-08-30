@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import modelo.Usuario;
+import com.ejemplo.carmenuy.model.Usuario;
 
 /**
  * Clase que gestiona la conexión a la base de datos y las operaciones relacionadas con los usuarios.

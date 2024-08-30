@@ -1,42 +1,40 @@
 package com.ejemplo.carmenuy.control;
 
+import com.ejemplo.carmenuy.database.DatabaseInitialization;
 import com.ejemplo.carmenuy.model.ModeloUsuario;
 import com.ejemplo.carmenuy.model.UsuarioLogin;
 import com.ejemplo.carmenuy.service.UsuarioService;
-import com.ejemplo.carmenuy.ui.rc.RegistroCuenta;
-import com.ejemplo.carmenuy.ui.rc.VLogin;
+import com.ejemplo.carmenuy.ui.rc.VLogin2;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import com.ejemplo.carmenuy.ui.rc.VBienvenida;
 import com.ejemplo.carmenuy.ui.rc.VJuego2;
 import java.util.List;
- 
 
 /**
  *
  * @author 32681391
  */
-public class ControladorLogin implements ActionListener { // para poder escuchar los eventos
+public class ControladorLogin2 implements ActionListener { // para poder escuchar los eventos
 
     // declaración de dependencias
-    private static ControladorLogin instancia; // autoreferencia (singleton)
+    private static ControladorLogin2 instancia; // autoreferencia (singleton)
     private ModeloUsuario modeloUsuario;
-    private VLogin vistaLogin;
+    private VLogin2 vistaLogin;
     private VBienvenida vBienvenida;
     private VJuego2 vJuego;
     private UsuarioService usuarioService;
-    private RegistroCuenta registroCuenta;
 
     // constructor privado (evita usar el operador new)
-    private ControladorLogin() {
+    private ControladorLogin2() {
         modeloUsuario = new ModeloUsuario(); // cargar los usuarios de la BD
         usuarioService = new UsuarioService();
     }
 
     // Singleton: cuando se crea el controlador, crean también las ventanas
-    public static ControladorLogin obtenerInstancia() {
+    public static ControladorLogin2 obtenerInstancia() {
         if (instancia == null) { // si el controlador no existe lo crea
-            instancia = new ControladorLogin(); // se instancia a si mismo
+            instancia = new ControladorLogin2(); // se instancia a si mismo
             crearVentanas(); // crea las ventanas con las que se va a comunicar
         }
         return instancia; // si el controlador ya existe lo retorna
@@ -44,16 +42,12 @@ public class ControladorLogin implements ActionListener { // para poder escuchar
 
     // creación de las dependencias del controlador: las ventanas con las que interactúa
     private static void crearVentanas() {
-        instancia.vistaLogin = VLogin.obtenerInstancia();
+        instancia.vistaLogin = VLogin2.obtenerInstancia();
         instancia.vistaLogin.setVisible(true);
         instancia.vBienvenida = VBienvenida.obtenerInstancia();
-        instancia.vBienvenida.setVisible(false);
+        instancia.vBienvenida.dispose();
         instancia.vJuego = VJuego2.obtenerInstancia();
-        instancia.vJuego.setVisible(false);
-        instancia.registroCuenta = RegistroCuenta.obtenerInstancia();
-        instancia.registroCuenta.setVisible(false);
-       
-      // instancia.VentanaRegistro1 = setVisible(true);
+        instancia.vJuego.dispose();
     }
 
     @Override
@@ -77,31 +71,6 @@ public class ControladorLogin implements ActionListener { // para poder escuchar
             vJuego.setEnabled(true);
             vJuego.setVisible(true);
             vBienvenida.dispose();
-        }
-        
-        if (e.getSource() == vistaLogin.getjButReg()) {
-            registroCuenta.setEnabled(true);
-            registroCuenta.setVisible(true);
-            vistaLogin.setVisible(false);            
-        }
-        
-        if (e.getSource() == registroCuenta.getjBtnAceptar()) {
-            String nombre = registroCuenta.getjTextNombre().getText();
-            String apellido = registroCuenta.getjTextApellido().getText();
-            char[] pass = registroCuenta.getjPasswordContraseña().getPassword();
-            char[] repPass = registroCuenta.getjPasswordRepetirContra().getPassword();
-            String ps = new String(pass);
-            String repps = new String(repPass);
-            if (ps.equals(repps)){
-                UsuarioService usuarioSer = new UsuarioService();
-                usuarioSer.insertarUsuario(nombre, apellido, ps, "junior", 0, "A");
-                vistaLogin.setEnabled(true);
-                vistaLogin.setVisible(true);
-                registroCuenta.dispose(); 
-            }else{
-                registroCuenta.mostrarMensaje("Las contraseñas no coinciden");
-            }
-                       
         }
 
         // Ventana JUEGO

@@ -1,9 +1,7 @@
 package com.ejemplo.carmenuy.ui.rc;
-
-
-
 import com.ejemplo.carmenuy.database.DatabaseInitialization;
 import com.ejemplo.carmenuy.dao.LocalidadDAO;
+import com.ejemplo.carmenuy.model.Localidad;
 import com.ejemplo.carmenuy.model.Localidad2;
 import java.sql.SQLException;
 import modelo.*;
@@ -11,7 +9,7 @@ import javax.swing.*;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import modelo.MapaDeUruguay;
+import com.ejemplo.carmenuy.model.MapaDeUruguay;
 
 public class VJuego2 extends JFrame{
     
@@ -91,14 +89,14 @@ public class VJuego2 extends JFrame{
         jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/MapaUruguay chico.jpg"))); // NOI18N
         jLabMapa.setLabelFor(jLabMapa);
 
-        Buscar.setText("BUSCAR");
+        Buscar.setText("BUSCAR SECUAZ");
         Buscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BuscarActionPerformed(evt);
             }
         });
 
-        ElegirLugar.setText("ELEGIR LUGAR");
+        ElegirLugar.setText("ELEGIR LOCALIDAD");
         ElegirLugar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ElegirLugarActionPerformed(evt);
@@ -148,20 +146,74 @@ public class VJuego2 extends JFrame{
     }//GEN-LAST:event_BuscarActionPerformed
 
     private void ElegirLugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ElegirLugarActionPerformed
-//        List<String> nombres=null;
-//        LocalidadDAO l = new LocalidadDAO(new DatabaseInitialization().getConnection());
-//        try {
-//            List<Localidad2> localidades = l.obtenerTodasLasLocalidades();
-//        } catch (SQLException ex) {
-//            Logger.getLogger(VJuego2.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        for(int i = 0;i < localidades.size(); i++){
-//            nombres.add(localidades.get(i).getNombre());
-//        }
-//        Object [] deptos = nombres.toArray();
-//        Object [] colores ={"Artigas","Salto","Paysandú","Rio Negro","Rivera","Tacuarembo","Soriano", "Flores", "Cerro Largo","Durazno", "Rocha", "Florida", "Lavalleja", "Treinta y Tres", "Canelones", "San José", "Maldonado", "Colonia", "Montevideo"}; 
-//        Object seleccion=JOptionPane.showInputDialog(null,"Selecciona un departamento", "Elegir",JOptionPane.QUESTION_MESSAGE,null,deptos, deptos[0]);
-//        JOptionPane.showConfirmDialog(rootPane, seleccion);
+        Object [] departamentos ={"Artigas","Salto","Paysandú","Rio Negro","Rivera","Tacuarembo","Soriano", "Flores", "Cerro Largo","Durazno", "Rocha", "Florida", "Lavalleja", "Treinta y Tres", "Canelones", "San José", "Maldonado", "Colonia", "Montevideo"};
+        Object seleccion=JOptionPane.showInputDialog(null,"Selecciona un departamento", "Elegir",JOptionPane.QUESTION_MESSAGE,null,departamentos, departamentos[0]);
+        System.out.println(seleccion.toString());
+        if(seleccion.toString()!=null){
+            switch (seleccion.toString()) {
+             case "Artigas":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/artigas.jpg")));
+                break; 
+             case "Salto":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/salto.jpg")));
+                break; 
+              case "Paysandú":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/paysandu.jpg")));
+                break; 
+              case "Rio Negro":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rio negro.jpg")));
+                break;   
+                 case "Rivera":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rivera.jpg")));
+                break; 
+             case "Tacuarembo":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/tacuarembo.jpg")));
+                break;  
+             case "Soriano":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/soriano.jpg")));
+                break;   
+             case "Flores":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/flores.jpg")));
+                break;     
+             case "Cerro Largo":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cerrolargo.jpg")));
+                break;   
+             case "Durazno":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/durazno.jpg")));
+                break;     
+             case "Rocha":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/rocha.jpg")));
+                break;
+             case "Florida":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/florida.jpg")));
+                break;   
+             case "Lavalleja":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lavalleja.jpg")));
+                break;  
+              case "Treinta y Tres":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/treinta y tres.jpg")));
+                break;   
+             case "Canelones":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/canelones.jpg")));
+                break;  
+             case "San José":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/san jose.jpg")));
+                break; 
+             case "Maldonado":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Maldonadoo.jpg")));
+                break;   
+              case "Colonia":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/colonia"
+                        + ".jpg")));
+                break;      
+             case "Montevideo":
+                jLabMapa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Montevideo.jpg")));
+                break; 
+            default:
+                throw new AssertionError();
+            }
+        }
+        
     }//GEN-LAST:event_ElegirLugarActionPerformed
 
     private void PISTAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PISTAActionPerformed

@@ -69,7 +69,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="Buscar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="BUSCAR"/>
+        <Property name="text" type="java.lang.String" value="BUSCAR SECUAZ"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BuscarActionPerformed"/>
@@ -77,7 +77,7 @@
     </Component>
     <Component class="javax.swing.JButton" name="ElegirLugar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="ELEGIR LUGAR"/>
+        <Property name="text" type="java.lang.String" value="ELEGIR LOCALIDAD"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ElegirLugarActionPerformed"/>
